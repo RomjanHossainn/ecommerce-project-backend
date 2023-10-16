@@ -39,7 +39,7 @@ const Home = () => {
               className={!isshow ? "hidden" : "btn btn-primary px-8"}
               onClick={() => setIsshow(!isshow)}
             >
-              Show
+              Show All
             </button>
           </div>
         </div>
