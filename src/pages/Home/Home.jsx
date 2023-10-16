@@ -2,18 +2,18 @@ import { useLoaderData } from "react-router-dom";
 import Banner from "../../components/Banner/Banner";
 import Navbar from "../../components/Navbar/Navbar";
 import SingleProduct from "../../components/SingleProduct/SingleProduct";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Footer from "../../components/Footer/Footer";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const Home = () => {
     
     const loadededProdcuts = useLoaderData();
-
     const [isshow,setIsshow] = useState(true)
     
-
     return (
       <div>
+        
         <Navbar></Navbar>
         <Banner></Banner>
         <div className="max-w-7xl mx-auto px-6 mb-12">
@@ -32,7 +32,9 @@ const Home = () => {
                     key={product._id}
                     product={product}
                   ></SingleProduct>
-                ))}
+                ))
+                }
+                
           </div>
           <div className="flex justify-center">
             <button
@@ -46,6 +48,7 @@ const Home = () => {
         <Footer></Footer>
       </div>
     );
+    
 };
 
 export default Home;

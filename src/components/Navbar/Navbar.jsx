@@ -14,12 +14,12 @@ const Navbar = () => {
       <nav className="bg-white dark:bg-gray-800  shadow py-4 ">
         <div className=" px-6 lg:px-4 mx-auto max-w-7xl">
           <div className="flex items-center justify-between h-16">
-            <div className=" flex md:gap-5 items-center">
+            <div className=" flex  items-center">
               <a className="flex-shrink-0 font-semibold text-2xl" href="/">
                 BODU BRAND
               </a>
-              <div className="hidden md:block">
-                <div className="flex items-baseline ml-10 space-x-4">
+              <div className="hidden lg:block">
+                <div className="flex items-baseline ml-3 xl:ml-10 space-x-4">
                   <NavLink
                     to="/"
                     className="hover:text-gray-400  text-gray-800 dark:hover:text-white px-3 py-2 rounded-md text-md font-medium"
@@ -130,7 +130,7 @@ const Navbar = () => {
                 </div>
               </div>
             </div>
-            <div className="flex -mr-2 md:hidden">
+            <div className="flex -mr-2 lg:hidden">
               <button
                 onClick={() => setToggle(!toggle)}
                 className="text-gray-800 dark:text-white hover:text-gray-500 inline-flex items-center justify-center p-2 rounded-md focus:outline-none"
@@ -149,8 +149,8 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-        <div className={toggle ? "block transition-all" : "hidden md:hidden"}>
-          <div className="px-5  pt-2 pb-3 space-y-1 sm:px-5 md:hidden">
+        <div className={toggle ? "block transition-all" : "hidden lg:hidden"}>
+          <div className="px-5  pt-2 pb-3 space-y-1 sm:px-5 lg:hidden">
             <NavLink
               className=" hover:text-gray-400 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium"
               href="/#"
